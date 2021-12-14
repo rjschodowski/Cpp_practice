@@ -1,0 +1,25 @@
+#include <iostream>
+using std::cout; // add this here if you need to print multiple times
+using std::cin;
+
+int main() {
+  cout << 9*3 << '\n';
+  cout << 9/3 << '\n';
+  cout << "Hello Waldo!\n";
+  cout << "Gym is a name but not the way it's spelled.\n";
+  cout <<  5 * 5 << '\n';
+  
+  int apple = 14;
+  int banana = 6;
+  int fruit = apple + banana;
+  cout << fruit << '\n';
+
+  int age = 40;
+  cout << age << '\n';
+
+  //The equivalent of scanf in C: cin
+  int n;
+  cout << "Enter a number: ";
+  cin >> n;
+  cout << '\n'  << n * fruit << '\n';
+} 
