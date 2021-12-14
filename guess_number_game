@@ -1,0 +1,28 @@
+#include <iostream>
+using std::cout;
+using std::cin;
+
+int main() {
+  int correctNumber = 8;
+  int guessingNumber;
+
+  while(guessingNumber != correctNumber)
+  {
+    cout << "Guess my number. Enter a number 1 through 20: ";
+    cin >> guessingNumber;
+
+    if (guessingNumber > correctNumber)
+    {
+      cout << "Your guess is too high!";
+    }
+    else if (guessingNumber < correctNumber)
+    {
+      cout << "Your guess is too low!";
+    } else
+    {
+      cout << "You are correct. Now go eat a cookie!";
+    }
+}
+}
+
+//this is my first attempt. I used a while loop to keep the player guessing until the correct number is guessed.
