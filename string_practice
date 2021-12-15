@@ -1,0 +1,24 @@
+#include <iostream>
+using std::cout;
+using std::cin;
+#include <string>
+using std::string;
+
+int main() {
+    string name;
+  while (name != "R.J." || name == "R.J.")
+    {
+    // string name;
+    cout << "Who are you, man? ";
+    cin >> name;
+    string greeting = "Hello, " + name;
+    if (name == "R.J.")
+    {
+      greeting += "I know you!";
+    } 
+    cout << greeting << '\n';
+    
+  }
+}
+
+//I decided I wanted to add a while loop to this little program so that it would continually ask the question and you could answer as often as desired. :)
