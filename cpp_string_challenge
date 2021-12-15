@@ -1,0 +1,46 @@
+/*
+
+Write a program that asks for two words
+
+If one word is longer than the other, write 'This word is longer'
+If one words is shorter than the other, write 'This word is shorter'
+or,
+If both words are the same length, write 'Both are the same length.'
+
+Hint: use Guess My Number program for ideas
+You are comparing the lengths of each string
+
+*/
+
+
+#include <iostream>
+using std::cout;
+using std::cin;
+#include <string>
+using std::string;
+
+int main() {
+  bool repeat = true;
+
+  while (repeat)
+
+    {
+    string first_word;
+    string second_word;
+
+    cout << "Enter a word: \n";
+    cin >> first_word;
+    cout << "Enter another word: \n";
+    cin >> second_word;
+
+    if (first_word.length() > second_word.length())
+    {
+      cout << "The first word you entered is longer than the second! \n";
+    } else if (first_word.length() < second_word.length())
+    {
+      cout << "The first word you entered is shorter than the second! \n";
+  } else cout << "Both words have the same number of letters. Woot! \n";
+  }
+}
+
+//I know this is really basic, but this is quite fun! I like the ease of writing strings as opposed to writing strings in C. (No offense, C!)
