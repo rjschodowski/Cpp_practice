@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+       //sides of the room
+       double length;
+       double width;
+       cout << "Enter the length: ";
+       cin >> length;
+       cout << "Enter the width: ";
+       cin >> width;
+
+       //output the area
+
+       double area = length * width;
+
+       cout << "The floor's area is: " << area << " square feet" << endl;
+       
+	return 0;
+}
