@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    int b;
+    int sum;
+
+    cout << "Enter a number:" << endl;
+    cin >> a;
+    cout << "Enter a second number" << endl;
+    cin >> b;
+    sum = a + b;
+    cout << "Your sum is: " << sum << endl;
+
+    return 0;
+}
+
+//At first I struggled with how to print out line 14 because the variable sum did not print properly if I inserted it inside the "". I realized from another example that I need to add << after a string in order for it to print the variable's value.
