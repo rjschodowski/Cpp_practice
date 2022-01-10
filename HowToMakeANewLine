@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Hello world!" << endl;
+    cout << "I love programming!" << endl;
+    cout << "I actually made the bed today!";
+    return 0;
+}
+
+//The endl is what \n does in C programming
