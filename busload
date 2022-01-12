@@ -15,15 +15,50 @@ Hint: The modulo operator % can help to determine the number of passengers for t
 
 */
 
+
+/*First attempt, which failed
+
 #include <iostream>
 using namespace std;
 
 int main() {
-    int busload = 50;
+int busload = 50;
     int passengers;
-    int emptySeats = passengers - busload;
-    cout << emptySeats;
-    
+    int availableSeats;
+    int overflowPeople;
+
+    //Compare # of passengers total vs a full busload (50 people)
+
+    if (passengers <= 50) {
+        //Find out # of empty seats
+        availableSeats = busload - passengers;
+        cout << availableSeats;
+    } else if ((passengers > 50) && (50 <= 100)) {
+        //Find out # of empty seats for next bus ride
+        overflowPeople = passengers - busload;
+        int openSeats = busload - overflowPeople;
+        cout << openSeats;
+    }  
+
+    return 0;
+}
+
+I couldn't see why SoloLearn suggested using the Modulo operator. I thought I understood it, but now looking back, this exercise showed me that I didn't, and it helped
+me to actually understand it better!
+
+*/
+
+//Here is a much better solution to find available seats, regardless of how many total passengers, great or few in number:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    //your code goes here
+    int input;
+    cin >> input;
+    cout << 50 - input % 50;
     
     return 0;
 }
+
