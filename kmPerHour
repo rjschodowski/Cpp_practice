@@ -1,0 +1,21 @@
+/*
+You are on a 5 hour sea voyage. The ship sails at a speed of 40 km per hour. Write a program that will output how many kilometers the ship has traveled by each hour.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int distance = 0;
+    int speed = 40;
+    for (distance=1; distance <=5; distance++) {
+        int kilometers = distance * speed;
+        cout << kilometers << endl;
+    }
+    
+    return 0;
+}
+
+//I set distance = 1 (instead of 0) in order to just start counting from hour 1 (which is 40 km at that time), rather than counting from hour 0.
