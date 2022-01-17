@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int intNumber=30;
+    float floatNumber = 30.78;
+    double doubleNumber = 45.1234;
+    bool boolean = true;
+    char charName = 'u';
+
+    cout << "Value of Integer is: " << intNumber << endl;
+    //cout your integer variable here
+    cout<< endl;
+    cout << "Value of Float is: " << floatNumber << endl;
+    //cout your float variable here
+    cout<<endl;
+    cout << "Value of Double is: " << doubleNumber << endl ;
+    //cout your double variable here
+    cout<< endl;
+    cout << "Value of Char is: " << charName << endl;
+    //cout your char variable here
+    cout<< endl;
+    cout << "Value of Bool is: " << boolean << endl;
+    //cout bool double variable here
+    cout<< endl;
+    return 0;
+}
