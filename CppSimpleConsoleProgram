@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	string name;
+	string address;
+	string phoneNumber;
+
+
+	//Gathering information
+	cout << "Enter your name: " << endl;
+	cin >> name;
+	cout << "Enter your address: " << endl;
+	cin >> address;
+	cout << "Enter your phone number: " << endl;
+	cin >> phoneNumber;
+
+	//Information output
+	cout << "Your name is: ";
+	cout << name << endl;
+
+	cout << "Your address is: ";
+	cout << address << endl;
+
+	cout << "Your phone number is: ";
+	cout << phoneNumber << endl;
+
+	return 0;
+}
