@@ -1,0 +1,37 @@
+/*
+Write a code in which you:
+First compute the squares for variables a and b
+Second add them together
+Third take the square root of the answer
+*/
+
+//My attempt
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float test(float a, float b) {
+  
+  float computeSqrt;
+  a = pow(a, 2);
+  b = pow(b, 2);
+  float absum = a + b;
+  computeSqrt = sqrt(absum);
+  cout << "Answer is: " << computeSqrt<<endl;
+  return computeSqrt;
+}
+
+//Educative's solution:
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float test(float a, float b) {
+  float computeSqrt;
+  computeSqrt = pow(a,2) + pow(b,2);            // computing power using POW function
+  computeSqrt = sqrt(computeSqrt);             // computing power using SQRT function
+  cout << "Answer is " << computeSqrt << endl;
+  return computeSqrt;
+}
+
+//I realized that I could have simply used computeSqrt for each step of this problem, rather than creating variables for the square and sum of the two variables.
