@@ -1,0 +1,28 @@
+/*
+Write a function called minimum. In the function parameter you will pass two values of type int by reference, and the function will set the smallest number of two to -1.
+*/
+
+#include <iostream>
+using namespace std;  
+
+void minimum(int &number1, int &number2) {
+  number1 = 200;
+  number2 = 200;
+  int lesserNumber = -1;
+
+  if (number1 < number2) {
+    cout << "Number1 = " << lesserNumber << endl;
+    cout << "Number2 = " << number2 << endl;
+  } else if (number2 < number1) {
+    cout << "Number1 = " << number1 << endl;
+    cout << "Number2 = " << lesserNumber << endl;
+  } else {
+    cout << "Number1 and Number2 are equal!" << endl;
+  }
+}
+
+int main() {
+  int number1 = 0;
+  int number2 = 0;
+  minimum(number1, number2);
+}
