@@ -1,0 +1,60 @@
+/*
+You have to write a function 'test' that takes two values of type double and one value of type char in its input parameters.
+
+
+double test (double number1, char operate, double number2);
+
+number1 and number2 take the values of the operands.
+
+Operate can take +,-, *, and / in its value.
+
+If the value of operate is +, then it should call the function that adds the values of number1 and number2 and returns the result in the output.
+
+If the value of operate is -, then it should call the function that subtracts the value of number2 from number1 and returns the result in the output.
+
+If the value of operate is *, then it should call the function that multiplies the values of number1 by number2 and returns the result in the output.
+
+If the value of operate is /, then it should call the function that divides the values of number1 by number2 and returns the result in the output.
+
+For any other value of operate, it should return -1 in the output.
+
+*/
+
+
+#include <iostream>
+using namespace std; 
+
+double test(double number1, char operate, double number2) {
+  double result;
+  
+  // cout << operate<<" "<<(int)operate<<endl;
+
+  switch (operate) {
+    case 43: 
+    result = number1 + number2;
+    cout << result;
+    break;
+    case 45: 
+    result = number1 - number2;
+    cout << result;
+    break;
+    case 42: 
+    result = number1 * number2;
+    cout << result;
+    break;
+    case 47: 
+    result = number1 / number2;
+    cout << result;
+    break;
+    default:
+    cout << -1;
+  }
+
+  return result;
+}
+
+int main() {
+
+ test(25,'-', 5);
+
+}
