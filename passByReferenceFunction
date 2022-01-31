@@ -6,16 +6,21 @@ Write a function called minimum. In the function parameter you will pass two val
 using namespace std;  
 
 void minimum(int &number1, int &number2) {
-  number1 = 200;
+  number1 = 7;
   number2 = 200;
   int lesserNumber = -1;
 
   if (number1 < number2) {
-    cout << "Number1 = " << lesserNumber << endl;
+    number1 = lesserNumber;
+    number2 = number2;
+    cout << "Number1 = " << number1 << endl;
     cout << "Number2 = " << number2 << endl;
   } else if (number2 < number1) {
+    number1 = number1;
+    number2 = lesserNumber;
     cout << "Number1 = " << number1 << endl;
-    cout << "Number2 = " << lesserNumber << endl;
+
+        cout << "Number2 = " << lesserNumber << endl;
   } else {
     cout << "Number1 and Number2 are equal!" << endl;
   }
