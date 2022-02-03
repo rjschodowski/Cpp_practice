@@ -13,26 +13,75 @@ The value after swapping are :
 element 1 = 7, element 2 = 5, element 3 = 6                                                            
 */
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
+// int main() {
 
-int num1, num2, num3, temp;
+// int num1, num2, num3, temp;
 
-  printf("Input the value of the 1st element: ");
-  scanf("%d", &num1);
-  printf("Input the value of the 2nd element: ");
-  scanf("%d", &num2);
-  printf("Input the value of the 3rd element: ");
-  scanf("%d", &num3);
-  printf("The values before swapping are %d, %d, and %d", num1, num2, num3);
+//   printf("Input the value of the 1st element: ");
+//   scanf("%d", &num1);
+//   printf("Input the value of the 2nd element: ");
+//   scanf("%d", &num2);
+//   printf("Input the value of the 3rd element: ");
+//   scanf("%d", &num3);
+//   printf("The values before swapping are %d, %d, and %d", num1, num2, num3);
 
-  int arr[] = {num1, num2, num3};
-  temp = arr[2];
+//   int arr[] = {num1, num2, num3};
+//   temp = arr[2];
   
-  for (int i = 2; i >= 0; i--) {
-    arr[i + 1] = arr[i];
-  }
-  arr[0] = temp;
-  printf("The values after swapping are %d, %d, %d ", arr[0], arr[1], arr[2]);
+//   for (int i = 2; i >= 0; i--) {
+//     arr[i + 1] = arr[i];
+//   }
+//   arr[0] = temp;
+//   printf("The values after swapping are %d, %d, %d ", arr[0], arr[1], arr[2]);
+// }
+
+//Now, let's do this passing by reference...(Lloyd's way from weekly Code Gym meetup)
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+void printNums(int* a, int* b, int* c)
+{
+printf("Element 1 = %d\n", *a);
+printf("Element 2 = %d\n", *b);
+printf("Element 3 = %d\n\n", *c);
+}
+
+
+
+void swapper(int* first, int* second, int* third)
+{
+int temp = *third;
+*third = *second;
+*second = *first;
+*first = temp;
+}
+
+
+
+void pointerEx11()
+{
+int a = 5;
+int* pA = &a;
+int b = 6;
+int* pB = &b;
+int c = 7;
+int* pC = &c;
+printf("The values before swapping are: \n");
+printNums(pA, pB, pC);
+swapper(pA, pB, pC);
+printf("The values after swapping are: \n");
+printNums(pA, pB, pC);
+}
+
+
+
+int main()
+{
+pointerEx11();
+return 0;
 }
