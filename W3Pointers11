@@ -28,9 +28,11 @@ int num1, num2, num3, temp;
   printf("The values before swapping are %d, %d, and %d", num1, num2, num3);
 
   int arr[] = {num1, num2, num3};
-  temp = arr[0];
-  for (int i = 1; i < 3; i++) {
-    arr[i - 1] = arr[i];
-    
+  temp = arr[2];
+  
+  for (int i = 2; i >= 0; i--) {
+    arr[i + 1] = arr[i];
   }
+  arr[0] = temp;
+  printf("The values after swapping are %d, %d, %d ", arr[0], arr[1], arr[2]);
 }
