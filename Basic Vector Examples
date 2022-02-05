@@ -1,0 +1,41 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+
+#include <string>
+using std::string;
+
+#include <vector>
+using std::vector;
+using std::begin;
+using std::end;
+
+#include <algorithm>
+using std::count;
+using std::sort;
+
+//How to create and print out a vector:
+// int main() {
+//   vector<int> nums = {294, 333, 801, 222};
+//   for (auto item:nums) {
+//     cout << item << " ";
+//   }
+// }
+
+//How to add an item at the end of a vector:
+// int main() {
+//   vector<int> nums = {294, 333, 801, 222};
+//   nums.push_back(1);
+//   for (auto item:nums) {
+//     cout << item << " ";
+//   }
+// }
+
+//How to sort your vector items
+int main() {
+  vector<int> nums = {294, 333, 801, 222};
+  sort(begin(nums), end(nums));
+  for (auto item:nums) {
+    cout << item << " ";
+  }
+}
