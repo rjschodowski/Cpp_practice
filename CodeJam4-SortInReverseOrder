@@ -1,0 +1,18 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::greater;
+
+#include <algorithm>
+using std::sort;
+
+//Sort in descending order using sort algorithm lib function
+int main() {
+  int arr[] = {10, 67, 98, 3};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  sort(arr, arr + n, greater<int>());
+
+  for (int i=0; i<n; i++) {
+    cout << arr[i] << " ";
+  }
+}
