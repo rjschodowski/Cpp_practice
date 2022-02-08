@@ -1,0 +1,15 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+#include <algorithm>
+#include <array>
+
+int main() {
+  std::array<int, 10> nums={1,2,3,4,5,6,7,8,9,10};
+
+  cout << "The array's elements are: \n";
+
+  for (auto x : nums) {
+    cout << ' ' << x;
+  }
+}
