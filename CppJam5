@@ -1,0 +1,20 @@
+#include <iostream>
+
+void area(double *const length, double * const width, double *results) {
+  double rectangle = *length * *width;
+  *results = rectangle;
+}
+
+int main() {
+  double length = 4.5;
+  double width = 6.7;
+  double results = 0;
+
+  area(&length, &width, &results);
+  double *plength = &length;
+  double *pwidth =  &width;
+  double *presults = &results;
+
+  area(plength, pwidth, presults);
+  std::cout << results;
+}
