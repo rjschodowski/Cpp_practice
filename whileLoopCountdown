@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{   
+    cout << "Enter a number in seconds: " << endl;
+    int seconds;
+    cin>>seconds;
+    cout << "Counting down..." << endl;
+    while (0 <=seconds) {
+        cout << seconds-- << endl;
+    }
+    
+    
+    return 0;
+}
