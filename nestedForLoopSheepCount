@@ -16,12 +16,12 @@ int main() {
   cin >> sheep;
 
   for (i =1; i<=sheep; i++) {
-    cout << "You counted " << i << " sheep..." << endl;
+    cout << "\nYou counted " << i << " sheep...\n" << endl;
     for (z =0; z< 3; z++) {
-      cout << "Snawshoo...Snawshoo...Snawshoo..." << endl;
+      cout << "\tSnawshoo...Snawshoo...Snawshoo..." << endl;
     };
   }
-  cout << "Good night and sleep tight!" << endl;
+  cout << "\nGood night and sleep tight!" << endl;
 }
 
 //I wanted to add a snoring nested for loop!
