@@ -1,0 +1,27 @@
+/*
+Objective
+Have you ever had a tough time going to sleep? Have you tried counting sheep? We will make a program that will count sheep for you.
+
+Begin by creating an integer variable to hold the number of sheep. Ask the user how many sheep do they need to count before falling asleep (choose between 1-500). Have the user ‘cin’ the number of sheep into your variable. Create a for loop that has an iterator that starts at 1. Add a condition that your variable has to be less than or equal the number of sheep your user wants. Have your iterator be updated by adding 1 every time the loop is ran. Inside your for loop, ‘cout’ the amount of sheep that have been counted, use your iterator to show this. Ex: “You have counted # sheep” Outside of your loop ‘cout’ a message you want your user to see before they go to sleep.
+*/
+
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+
+int main() {
+  int sheep, i, z;
+  cout << "How many sheep do you need to count before falling asleep?" << endl;
+  cin >> sheep;
+
+  for (i =1; i<=sheep; i++) {
+    cout << "You counted " << i << " sheep..." << endl;
+    for (z =0; z< 3; z++) {
+      cout << "Snawshoo...Snawshoo...Snawshoo..." << endl;
+    };
+  }
+  cout << "Good night and sleep tight!" << endl;
+}
+
+//I wanted to add a snoring nested for loop!
