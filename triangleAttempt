@@ -14,7 +14,8 @@ int main() {
     while (y > 0) {
       cout << "& ";
       y--;
-    } cout << endl;
+    }
+    cout << "& "<< endl;
   } 
 }
 
