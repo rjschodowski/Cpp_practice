@@ -1,0 +1,43 @@
+
+//Note this is a code mini project challenge from Educative.io. Unfortunately, imagelib.h is not available, as it is embedded into the embedded text editor. I tried to find a way to replicate this file, but was unsuccessful.
+
+/* 
+Code Challenge:
+
+Coding exercise
+You are given a grayscale image’s pixel values in a 2D array named image. The dimensions of the array are given by variables height and width.
+
+Your task is to convert the grayscale image to a black and white image. To do this, apply a simple thresholding technique. If a pixel value is less than 7070, set it to 00, otherwise set it to 255255.
+
+Before diving directly into code, try to think about how you would use loops and array operations to do this. We won’t check if your code is correct or not. If you get stuck, you can always see the given solution in a laater lesson
+
+Good Luck! 👍
+
+📝 Note: You don’t need to worry about the details of imagelib.h. Just use height and width parameters to traverse the 2D-array.
+
+📝Note: In the code widget, you can see the modified image by pressing the arrow button > towards the right of the console
+*/
+
+#include <iostream>
+#include "imagelib.h"
+
+int main() {
+  // Displays input image
+  loadFile("input.png");
+  // Traverse rows in 2D array
+  for (int i = 0; i < height; i++) {
+    // Traverse columns in each row
+    for (int j = 0; j < width; j++) {
+      // Process pixel image[i][j], here
+      if (image[i][j] < 70) {
+        // Sets image pixel to black
+        image[i][j] = 0;
+      } else {
+        // Sets image pixel to white
+        image[i][j] = 255;
+      }
+    }
+  }
+  // Displays modified image
+  saveFile("output/modified.png");
+}
