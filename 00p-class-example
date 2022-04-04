@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+class Veggies {
+public:
+  int amount;
+string name;
+  string color;
+};
+
+int main() {
+  Veggies vegetable;
+  vegetable.amount = 15;
+  vegetable.name = "carrots";
+  vegetable.color = "orange";
+
+  cout << "I have " << vegetable.amount << " " << vegetable.color << " " << vegetable.name << "." << endl;
+}
