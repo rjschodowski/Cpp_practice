@@ -11,10 +11,26 @@ string name;
 };
 
 int main() {
-  Veggies vegetable;
-  vegetable.amount = 15;
-  vegetable.name = "carrots";
-  vegetable.color = "orange";
 
-  cout << "I have " << vegetable.amount << " " << vegetable.color << " " << vegetable.name << "." << endl;
+  //Objects
+  Veggies vegetable1;
+  vegetable1.amount = 15;
+  vegetable1.name = "carrots";
+  vegetable1.color = "orange";
+
+  Veggies vegetable2;
+  vegetable2.amount = 29;
+  vegetable2.name = "radishes";
+  vegetable2.color = "red";
+
+  Veggies vegetable3;
+  vegetable3.amount = 11;
+  vegetable3.name = "peppers";
+  vegetable3.color = "green";
+
+  cout << "I have " << vegetable1.amount << " " << vegetable1.color << " " << vegetable1.name << "." << endl;
+  
+    cout << "I have " << vegetable3.amount << " " << vegetable3.color << " " << vegetable3.name << "." << endl;
+
+    cout << "I have " << vegetable2.amount << " " << vegetable2.color << " " << vegetable2.name << "." << endl;
 }
