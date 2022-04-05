@@ -1,0 +1,114 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+/* Each example can be run separately by copying and pasting into your IDE or text editor */
+
+// **********************************************************************************************************
+
+//Basic example of a class
+
+// **********************************************************************************************************
+
+class Veggies {
+
+public:
+  
+  string name;
+  string color;
+  int getAmount(int number);
+};
+
+int Veggies::getAmount(int number) {
+  return number;
+}
+
+int main() {
+
+  //Objects
+  Veggies vegetable1;
+  vegetable1.getAmount(0);
+  vegetable1.name = "carrots";
+  vegetable1.color = "orange";
+
+  Veggies vegetable2;
+  vegetable2.getAmount(0);
+  vegetable2.name = "radishes";
+  vegetable2.color = "red";
+
+  Veggies vegetable3;
+  vegetable3.getAmount(0);
+  vegetable3.name = "peppers";
+  vegetable3.color = "green";
+
+  cout << "I have " << vegetable1.getAmount(15) << " " << vegetable1.color << " " << vegetable1.name << "." << endl;
+  
+    cout << "I have " << vegetable3.getAmount(29) << " " << vegetable3.color << " " << vegetable3.name << "." << endl;
+
+    cout << "I have " << vegetable2.getAmount(11) << " " << vegetable2.color << " " << vegetable2.name << "." << endl;
+}
+
+// **********************************************************************************************************
+
+//Example of a class constructor defined inside the class
+
+// **********************************************************************************************************
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+//Constructor defined outside the class
+
+class Veggies { // Constructor declaration
+public:
+  string name;
+  string color;
+  Veggies(string n, string c) {  // Constructor
+  name = n;
+  color = c;
+  }
+  
+};
+
+int main() {
+//Creatd Veggies object
+  Veggies vegetable1("carrots", "orange");
+
+  cout <<  "I have two " << vegetable1.color << " " << vegetable1.name << "." << endl;
+}
+
+// **********************************************************************************************************
+
+//Example of a class constructor defined outside the class
+
+// **********************************************************************************************************
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+//Constructor defined outside the class
+
+class Veggies { // Constructor declaration
+public:
+  string name;
+  string color;
+  Veggies(string n, string c);
+  
+};
+
+// Constructor definition outside the class
+Veggies::Veggies(string n, string c) {
+  name = n;
+  color = c;
+  }
+
+int main() {
+//Creatd Veggies object
+  Veggies vegetable1("carrots", "orange");
+
+  cout <<  "I have two " << vegetable1.color << " " << vegetable1.name << "." << endl;
+}
