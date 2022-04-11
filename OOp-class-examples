@@ -162,3 +162,39 @@ int main() {
   cout << emp1.getName() << ", age " <<emp1.getAge() << ", has salary of " << emp1.getSalary() << "." << endl; 
   return 0;
 }
+
+// **********************************************************************************************************
+
+//Example of inheritance
+
+// **********************************************************************************************************
+
+
+//Example 1 (simple)
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+//Base class
+class Animal {
+  public: 
+    string speciesName = "mammal";
+    int numLegs = 2;
+};
+
+//Derived class
+class Chimp: public Animal {
+  public: 
+    void signatureSound() {
+      cout << "Ooh, ooh, ah, ah!\n";
+    }
+    string name = "chimp";
+};  
+
+int main() {
+  Chimp myChimp;
+  myChimp.signatureSound();
+  cout << "A " << myChimp.name << " is a " <<myChimp.speciesName << " with " <<myChimp.numLegs << " legs.";
+
+}
