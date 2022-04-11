@@ -59,7 +59,7 @@ int main() {
 using namespace std;
 
 
-//Constructor defined outside the class
+//Constructor defined inside the class
 
 class Veggies { // Constructor declaration
 public:
