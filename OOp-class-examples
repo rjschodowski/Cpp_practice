@@ -1,4 +1,175 @@
 #include <iostream>
+#include <string>
+using namespace std;
+
+/* Each example can be run separately by copying and pasting into your IDE or text editor */
+
+// **********************************************************************************************************
+
+//Basic example of a class
+
+// **********************************************************************************************************
+
+class Veggies {
+
+public:
+  
+  string name;
+  string color;
+  int getAmount(int number);
+};
+
+int Veggies::getAmount(int number) {
+  return number;
+}
+
+int main() {
+
+  //Objects
+  Veggies vegetable1;
+  vegetable1.getAmount(0);
+  vegetable1.name = "carrots";
+  vegetable1.color = "orange";
+
+  Veggies vegetable2;
+  vegetable2.getAmount(0);
+  vegetable2.name = "radishes";
+  vegetable2.color = "red";
+
+  Veggies vegetable3;
+  vegetable3.getAmount(0);
+  vegetable3.name = "peppers";
+  vegetable3.color = "green";
+
+  cout << "I have " << vegetable1.getAmount(15) << " " << vegetable1.color << " " << vegetable1.name << "." << endl;
+  
+    cout << "I have " << vegetable3.getAmount(29) << " " << vegetable3.color << " " << vegetable3.name << "." << endl;
+
+    cout << "I have " << vegetable2.getAmount(11) << " " << vegetable2.color << " " << vegetable2.name << "." << endl;
+}
+
+// **********************************************************************************************************
+
+//Example of a class constructor defined inside the class
+
+// **********************************************************************************************************
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+//Constructor defined inside the class
+
+class Veggies { // Constructor declaration
+public:
+  string name;
+  string color;
+  Veggies(string n, string c) {  // Constructor
+  name = n;
+  color = c;
+  }
+  
+};
+
+int main() {
+//Creatd Veggies object
+  Veggies vegetable1("carrots", "orange");
+
+  cout <<  "I have two " << vegetable1.color << " " << vegetable1.name << "." << endl;
+}
+
+// **********************************************************************************************************
+
+//Example of a class constructor defined outside the class
+
+// **********************************************************************************************************
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+//Constructor defined outside the class
+
+class Veggies { // Constructor declaration
+public:
+  string name;
+  string color;
+  Veggies(string n, string c);
+  
+};
+
+// Constructor definition outside the class
+Veggies::Veggies(string n, string c) {
+  name = n;
+  color = c;
+  }
+
+int main() {
+//Creatd Veggies object
+  Veggies vegetable1("carrots", "orange");
+
+  cout <<  "I have two " << vegetable1.color << " " << vegetable1.name << "." << endl;
+}
+
+// **********************************************************************************************************
+
+//Example of encapsulation: setters and getters
+
+// **********************************************************************************************************
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+class Employee {
+  private:
+    // Private attribute
+    int salary;
+    int age;
+    string name;
+
+  public:
+    // Setters
+    void setSalary(int s) {
+      salary = s;
+    }
+    void setAge(int a) {
+      age = a;
+    }
+    void setName(string n) {
+      name = n;
+    }
+    // Getters
+    int getSalary() {
+      return salary;
+    }
+    
+    int getAge() {
+      return age;
+    }
+    string getName() {
+      return name;
+    }
+};
+
+int main() {
+  Employee emp1;
+  emp1.setSalary(50000);
+  emp1.setAge(25);
+  emp1.setName("Harold");
+  cout << emp1.getName() << ", age " <<emp1.getAge() << ", has salary of " << emp1.getSalary() << "." << endl; 
+  return 0;
+}
+
+// **********************************************************************************************************
+
+//Another example of encapsulation: setters and getters
+
+// **********************************************************************************************************
+
+#include <iostream>
 using namespace std;
 
 class Rectangle {
@@ -34,4 +205,83 @@ int main() {
   rect.setWidth(2);
   cout << rect.getWidth() << endl;
   cout << rect.area() << endl;
+}
+
+// **********************************************************************************************************
+
+//And yet one more example of encapsulation: setters and getters (functions defined outside the class)
+
+// **********************************************************************************************************
+
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+  int length;
+  int width;
+public:
+  void setLength(int l);
+  int getLength();
+  void setWidth(int w);
+  int getWidth();
+  int area();
+};
+
+void Rectangle::setLength(int l) {
+  length = l;
+}
+int Rectangle::getLength() {
+  return length;
+}
+void Rectangle::setWidth(int w) {
+  width = w;
+}
+int Rectangle::getWidth() {
+  return width;
+  }
+int Rectangle::area() {
+  return length * width;
+}
+
+int main() {
+  Rectangle rect;
+  rect.setLength(50);
+  rect.setWidth(100);
+  cout << rect.area();
+}
+
+// **********************************************************************************************************
+
+//Example of inheritance
+
+// **********************************************************************************************************
+
+
+//Example 1 (simple)
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+//Base class
+class Animal {
+  public: 
+    string speciesName = "mammal";
+    int numLegs = 2;
+};
+
+//Derived class
+class Chimp: public Animal {
+  public: 
+    void signatureSound() {
+      cout << "Ooh, ooh, ah, ah!\n";
+    }
+    string name = "chimp";
+};  
+
+int main() {
+  Chimp myChimp;
+  myChimp.signatureSound();
+  cout << "A " << myChimp.name << " is a " <<myChimp.speciesName << " with " <<myChimp.numLegs << " legs.";
+
 }
