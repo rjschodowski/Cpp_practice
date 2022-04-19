@@ -252,6 +252,42 @@ int main() {
 
 // **********************************************************************************************************
 
+//The same rectangle area calculation class, but with default and parameterized constructors. I learned this 
+//is a little less code to write than with the setters and getters.
+
+// **********************************************************************************************************
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Rectangle {
+  int length;
+  int width;
+  public:
+  Rectangle() {
+    length = 0;
+    width = 0;
+  }
+  Rectangle(int length, int width) {
+    this->length = length;
+    this->width = width;
+  }
+  int area() {
+    return length * width;
+  }
+  void printArea() {
+    cout << area();
+  }
+};
+
+int main() {
+  Rectangle rect(25,25);
+  rect.printArea();
+}
+
+// **********************************************************************************************************
+
 //Example of inheritance
 
 // **********************************************************************************************************
