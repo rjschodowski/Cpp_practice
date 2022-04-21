@@ -286,6 +286,49 @@ int main() {
   rect.printArea();
 }
 
+
+// **********************************************************************************************************
+
+//Another Example of Constructor
+
+// **********************************************************************************************************
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person {
+  int age;
+  int height;
+  int weight;
+  int moneyInBank;
+  int moneySpent;
+  string firstName;
+  string lastName;
+
+  public:
+
+  Person(string firstName, string lastName, int age, int weight, int height, int moneyInBank, int moneySpent) {
+    this->firstName = firstName;
+    this->lastName = lastName;
+    this->age = age;
+    this->weight = weight;
+    this->height = height;
+    this->moneyInBank = moneyInBank;
+    this->moneySpent = moneySpent;
+  }
+  void printPersonData() {
+    cout << firstName << " " << lastName << " " << "is " << age << " years old, weighs " << weight << " pounds and is " << height << " inches tall." << endl;
+    cout << "Mr. " << lastName << " had " << moneyInBank << " dollars, but after spending it now has " << " dollars left." << endl;
+  }
+};
+
+int main() {
+  Person RJ("R.J.", "Schodowski", 4, 50, 25, 10, 3);
+  RJ.printPersonData();
+}
+
+
 // **********************************************************************************************************
 
 //Example of inheritance
