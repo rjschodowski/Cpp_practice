@@ -399,6 +399,78 @@ int main(){
   cout << "Exiting program" << endl;
 }
 
+// **********************************************************************************************************
+
+//More class practice - multiple classes and constructors
+
+// **********************************************************************************************************
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+//Exercise: create a program that has an animal class and prints
+//the class data with a pointer.
+
+
+
+
+class Animal {
+public:
+string name;
+string gender;
+int age;
+Animal(string name, string gender, int age) {
+  this->name = name;
+  this->gender = gender;
+  this->age = age;
+}
+void printAnimalData() {
+  cout << name << ", " << gender << ", " << age << "." << endl;
+}
+};
+
+
+class Person {
+public:
+string name;
+string gender;
+int age;
+Person(string name, string gender, int age) {
+  this->name = name;
+  this->gender = gender;
+  this->age = age;
+}
+void printPersonData() {
+  cout << name << ", " << gender << ", " << age << "." << endl;
+}
+};
+
+
+class Computer {
+public:
+string name;
+string brand;
+int age;
+Computer(string name, string brand, int age) {
+  this->name = name;
+  this->brand = brand;
+  this->age = age;
+}
+void printComputerData() {
+  cout << name << ", " << brand << ", " << age << "." << endl;
+}
+};
+
+
+int main() {
+  Animal Mouse("Mouse", "female", 2);
+  Mouse.printAnimalData();
+  Person human("Dave", "male", 45);
+  human.printPersonData();
+  Computer Mac("MacBook", "Apple", "10");
+  Mac.printComputerData();
+}
 
 // **********************************************************************************************************
 
