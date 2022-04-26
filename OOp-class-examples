@@ -410,10 +410,6 @@ int main(){
 using namespace std;
 
 //Exercise: create a program that has an animal class and prints
-//the class data with a pointer.
-
-
-
 
 class Animal {
 public:
@@ -468,7 +464,7 @@ int main() {
   Mouse.printAnimalData();
   Person human("Dave", "male", 45);
   human.printPersonData();
-  Computer Mac("MacBook", "Apple", "10");
+  Computer Mac("MacBook", "Apple", 10);
   Mac.printComputerData();
 }
 
