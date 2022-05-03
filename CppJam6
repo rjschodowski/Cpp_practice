@@ -1,0 +1,49 @@
+/*
+ Write a C++ program to find the larger value from two positive integer values that is in the range 20..30 inclusive, or return 0 if neither is in that range. Go to the editor
+Sample Input:
+78, 95
+200, 30
+21, 25
+28, 28
+  */
+
+#include <iostream>
+
+using namespace std;
+
+int test(int x, int y)
+        {
+            if (x >= 20 && x <= 30 && y >= 20 && y <= 30)
+            {
+                if (x >= y)
+                {
+                    return x;
+                }
+                else
+                {
+                    return y;
+                }
+            }
+            else if (x >= 20 && x <= 30)
+            {
+                return x;
+            }
+            else if (y >= 20 && y <= 30)
+            {
+                return y;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        
+int main() 
+ {
+  cout << test(19, 95) << endl;  
+  cout << test(200, 30) << endl;  
+  cout << test(21, 25) << endl;  
+  cout << test(28, 28) << endl;  
+  return 0;    
+}
